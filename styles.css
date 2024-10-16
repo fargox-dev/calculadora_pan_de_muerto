@@ -1,0 +1,430 @@
+:root{
+    /* General space parameters */
+    --margin-general: 2.4rem;
+    --padding-general: 2.4rem;
+    --gap-general: 2.4rem;
+    
+    /* Specific space parameters */
+    --padding-link-moderate: 1.2rem;
+    --padding-link-small-sides: 1rem;
+    --padding-link-small: 0.3rem;
+
+    /* iPad specific space parameters */
+    --padding-megagigantic: 15rem;
+    --gap-megagigantic: 9rem;
+    --padding-gigantic: 12rem;
+    --gap-gigantic: 6rem;
+    --padding-semigigantic: 9rem;
+    --gap-semigigantic: 4rem;
+
+    /* Colors */
+    --color-a: #351b12;
+    --color-b: #7b4231;
+    --color-c: #f3ead9;
+    --color-d: #b38c5a;
+    --color-e: #41321f;
+    
+    /* Main logo size */
+    --width-logo: 20rem;
+
+    /* Text parameters */
+    --text-align-center: center;
+    --text-size-title: 3.0rem;
+    --text-size-link-small: 1.4rem;
+    --text-size-link-moderate: 1.8rem;
+    --text-weight-400: 400;
+    --text-weight-700: 700;
+
+    /* Border parameters */
+    --border-radius-moderate: 1rem;
+    --border-radius-small: 0.5rem;
+}
+/*---------------------------------------------------------------------------------------------------*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    font-family: "Open Sans", sans-serif;
+    /*border: 1px solid crimson;*/
+}
+html{
+	font-size: 62.5%;
+    min-height: 100vh;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*---------------------------------------------------------------------------------------------------*/
+.header-index{
+    /*flex-shrink: 0;*/
+    background-color: var(--color-a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+    width: 100%;
+}
+.title{
+    color: var(--color-b);
+    font-size: var(--text-size-title);
+    text-align: var(--text-align-center);
+    font-family: "Borel", cursive;
+}
+/*---------------------------------------------------------------------------------------------------*/
+.main-index{
+    /*flex-grow: 1;*/
+    background-color: var(--color-c);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    /*gap: var(--margin-general);*/
+    /*padding: var(--padding-general);*/
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+#breadForm{
+    width: 100%;
+}
+
+.s1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-b);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s1 h3{
+    text-align: center;
+    color: var(--color-a);
+}
+.s1 input{
+    width: 100%;
+    padding: var(--padding-link-moderate);
+    border-radius: var(--border-radius-moderate);
+    border: 2px solid var(--color-a);
+    background-color: var(--color-d);
+    color: var(--color-a);
+    font-size: 1.6rem;
+    text-align: center;
+}
+.s1 input::placeholder{
+    color: var(--color-a);
+    font-style: italic;
+}
+
+
+.s2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-c);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s2 h3{
+    text-align: center;
+    color: var(--color-a);
+}
+.s2 table{
+    width: 100%;
+}
+.s2 th:nth-child(2),
+.s2 th:nth-child(3),
+.s2 td:nth-child(2),
+.s2 td:nth-child(3) {
+    text-align: right;
+}
+
+
+.s3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-d);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s3 h3{
+    text-align: center;
+    color: var(--color-a);
+}
+.s3 table{
+    width: 100%;
+}
+.s3 td:nth-child(2) {
+    text-align: right;
+}
+
+
+.s4{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-b);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s4 h3{
+    text-align: center;
+    color: var(--color-a);
+}
+.s4 table{
+    width: 100%;
+}
+.s4 th:nth-child(1),
+.s4 td:nth-child(1){
+    text-align: center;
+}
+.s4 th:nth-child(3),
+.s4 th:nth-child(4),
+.s4 td:nth-child(3),
+.s4 td:nth-child(4) {
+    text-align: right;
+}
+
+
+.s5{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-d);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s5 button{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: var(--padding-link-moderate);
+    border-radius: var(--border-radius-moderate);
+    background-color: var(--color-a);
+    color: var(--color-d);
+    border: 2px solid var(--color-a);
+}
+
+
+.s6{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-c);
+    width: 100%;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.s6 h3{
+    text-align: center;
+    color: var(--color-a);
+}
+.s6 table{
+    width: 100%;
+}
+.s6 th:nth-child(2),
+.s6 th:nth-child(3),
+.s6 td:nth-child(2),
+.s6 td:nth-child(3) {
+    text-align: right;
+}
+
+
+
+
+
+thead,
+td{
+    text-align: left
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+.footer-index{
+    background-color: var(--color-a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-general);
+    gap: var(--gap-general);
+}
+.author{
+    color: var(--color-c);
+    text-align: var(--text-align-center);
+    font-size: var(--text-size-link-small);
+}
+.author-tag{
+    background-color: var(--color-c);
+    color: var(--color-b);
+    padding: var(--padding-link-small);
+    border-radius: var(--border-radius-small);
+    padding-inline-start: var(--padding-link-small-sides);
+    padding-inline-end: var(--padding-link-small-sides);
+    cursor: pointer;
+}
+.author-tag:hover,
+.author-tag:focus{
+    background-color: var(--color-b);
+    color: var(--color-c);
+    font-weight: var(--text-weight-700);
+}
+.social-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-general);
+}
+.social-icon{
+    background-color: var(--color-c);
+    color: var(--color-b);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+}
+.social-icon:hover,
+.social-icon:focus{
+    background-color: var(--color-b);
+    color: var(--color-c);
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*
+#breadForm{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-general);
+}
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b33535;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+form{
+    background-color: #212388;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#totalCost {
+    color: #28a745;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+    */
+
+/* Add different colors for material, quantity, and price columns */
+/*
+td:nth-child(1) {
+    background-color: #f2f2f2; 
+}
+
+td:nth-child(2) {
+    background-color: #e0f7fa; 
+}
+
+td:nth-child(3) {
+    background-color: #ffe0b2; 
+}
+*/
+/* Add background colors for headers */
+/*
+th:nth-child(1) {
+    background-color: var(--color-a); 
+}
+
+th:nth-child(2) {
+    background-color: var(--color-b); 
+}
+
+th:nth-child(3) {
+    background-color: var(--color-d); 
+}

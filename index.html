@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora Pan de Muerto">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="author" content="https://github.com/fargox-dev">
+    <meta http-equiv="pragma" content="no-cache">
+    <!--------------------------------------------------------------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <!--------------------------------------------------------------------------------------------------->
+    <link rel="shortcut icon" href="./assets/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!--------------------------------------------------------------------------------------------------->
+    <title>Pan de Muerto Calculadora</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header-index">
+        <h1 class="title">Panadería Don Marce</h1>
+    </header>
+    <!--------------------------------------------------------------------------------------------------->
+    <main class="main-index">
+        
+        <form id="breadForm">
+
+            <div class="s1">
+                <!-- Input for weight -->
+                <!--<label for="weight">Ingresa la Cantidad de Pan (kg):</label>-->
+                <h3>Ingresa la Cantidad de Pan de Muerto (kg):</h3>
+                <input type="number" id="weight" step="0.1" min="0" placeholder="Ejemplo: 5" required>
+            </div>
+            
+            <div class="s2">
+                <!-- Core ingredients as a table -->
+                <h3>Ingredientes Centrales (por kg de pan):</h3>
+                <table>
+                <thead>
+                    <tr>
+                    <th>Ingrediente</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Harina</td>
+                    <td>1,000 g</td>
+                    <td>$ 25</td>
+                    </tr>
+                    <tr>
+                    <td>Azucar</td>
+                    <td>300 g</td>
+                    <td>$ 12</td>
+                    </tr>
+                    <tr>
+                    <td>Manteca</td>
+                    <td>175 g</td>
+                    <td>$ 11</td>
+                    </tr>
+                    <tr>
+                    <td>Levadura</td>
+                    <td>40 g</td>
+                    <td>$ 5</td>
+                    </tr>
+                    <tr>
+                    <td>Huevo</td>
+                    <td>5 pieces</td>
+                    <td>$ 20</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <div class="s3">
+                <!-- Type of mantequilla -->
+                <h3>Tipo de Mantequilla:</h3>
+                <table>
+                <tbody>
+                    <tr>
+                    <td><input type="radio" id="mantequillaNormal" name="mantequillaType" value="normal" required> Normal</td>
+                    <td>$ 7</td>
+                    </tr>
+                    <tr>
+                    <td><input type="radio" id="mantequillaGloria" name="mantequillaType" value="gloria"> Gloria</td>
+                    <td>$ 20</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <div class="s4">
+                <!-- Optional ingredients -->
+                <h3>Ingredientes Opcionales (por kg de pan):</h3>
+                <table>
+                <thead>
+                    <tr>
+                    <th>Elegir</th>
+                    <th>Ingrediente</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td><input type="checkbox" id="canela"></td>
+                    <td>Canela</td>
+                    <td>15 g</td>
+                    <td>$ 8</td>
+                    </tr>
+                    <tr>
+                    <td><input type="checkbox" id="nuez"></td>
+                    <td>Nuez</td>
+                    <td>80 g</td>
+                    <td>$ 25</td>
+                    </tr>
+                    <tr>
+                    <td><input type="checkbox" id="pasas"></td>
+                    <td>Pasas</td>
+                    <td>80 g</td>
+                    <td>$ 8</td>
+                    </tr>
+                    <tr>
+                    <td><input type="checkbox" id="rompope"></td>
+                    <td>Rompope</td>
+                    <td>100 mL</td>
+                    <td>$ 15</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <div class="s5">
+                <!-- Button to calculate cost -->
+                <button type="button" onclick="calculateCost()">Calcular Costo</button>
+            </div>
+        
+        </form>
+
+        <div class="s6">
+            <!-- Display Total Cost -->
+            <h2>Costo Total: $<span id="totalCost">0.00</span></h2>
+
+            <!-- Required Materials Table -->
+            <h3>Material Requerido:</h3>
+            <table>
+            <thead>
+                <tr>
+                <th>Ingrediente</th>
+                <th>Cantidad</th>
+                <th>Costo</th>
+                </tr>
+            </thead>
+            <tbody id="requiredMaterialsTableBody">
+                <!-- Dynamic content will go here -->
+            </tbody>
+            </table>
+        </div>
+    </main>
+    <!--------------------------------------------------------------------------------------------------->
+    <footer  class="footer-index">
+        <p class="author">2024 | Designed by <span class="author-tag">fargox-dev</span></p>
+        <div class="social-container">
+            <span class="github"><i class="ri-github-fill ri-2x social-icon"></i></span>
+            <span class="linkedin"><i class="ri-linkedin-fill ri-2x social-icon"></i></span>
+            <span class="x"><i class="ri-twitter-x-fill ri-2x social-icon"></i></span>
+        </div>
+    </footer>
+    <!--------------------------------------------------------------------------------------------------->
+  <script src="app.js"></script>
+</body>
+</html>
